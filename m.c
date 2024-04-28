@@ -98,6 +98,9 @@ bool isGameOver(char board[3][3], char O, char X, int *scoreO, int *scoreX, int 
     if (board[0][0] == O && board[0][1] == O && board[0][2] == O ||
         board[1][0] == O && board[1][1] == O && board[1][2] == O ||
         board[2][0] == O && board[2][1] == O && board[2][2] == O ||
+        board[0][0] == O && board[1][0] == O && board[2][0] == O ||
+        board[0][1] == O && board[1][1] == O && board[2][1] == O ||
+        board[0][2] == O && board[1][2] == O && board[2][2] == O ||
         board[0][0] == O && board[1][1] == O && board[2][2] == O ||
         board[0][2] == O && board[1][1] == O && board[2][0] == O) {
             (*scoreO)++; // increase by 1 the score for O
@@ -107,6 +110,9 @@ bool isGameOver(char board[3][3], char O, char X, int *scoreO, int *scoreX, int 
     if (board[0][0] == X && board[0][1] == X && board[0][2] == X ||
         board[1][0] == X && board[1][1] == X && board[1][2] == X ||
         board[2][0] == X && board[2][1] == X && board[2][2] == X ||
+        board[0][0] == X && board[1][0] == X && board[2][0] == X ||
+        board[0][1] == X && board[1][1] == X && board[2][1] == X ||
+        board[0][2] == X && board[1][2] == X && board[2][2] == X ||
         board[0][0] == X && board[1][1] == X && board[2][2] == X ||
         board[0][2] == X && board[1][1] == X && board[2][0] == X) {
             (*scoreX)++; // increase by 1 the score for X
